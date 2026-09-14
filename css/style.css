@@ -536,3 +536,445 @@ a, button {
     font-size: .7rem;
   }
 }
+
+/* =========================================================
+   FINAL RESPONSIVE PASS — MOBILE FIRST VISUAL TUNING
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .section,
+  .contact {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .hero {
+    padding-top: 112px;
+    padding-bottom: 64px;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    overflow-wrap: normal;
+  }
+
+  .hero-mark {
+    min-height: 360px;
+  }
+
+  .logo-frame {
+    width: min(68vw, 390px);
+  }
+
+  .section-head {
+    margin-bottom: 42px;
+  }
+
+  .content h2,
+  .section-head h2 {
+    max-width: 100%;
+  }
+
+  .service {
+    grid-template-columns: 48px minmax(0, 1fr) 26px;
+    gap: 14px;
+    padding: 28px 0;
+  }
+
+  .service h3 {
+    font-size: clamp(24px, 4.8vw, 34px);
+  }
+
+  .service p {
+    font-size: 15px;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .step {
+    min-width: 0;
+  }
+
+  .reels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reel-wrap:last-child {
+    grid-column: auto;
+    max-width: none;
+  }
+}
+
+@media (max-width: 650px) {
+  html {
+    scroll-padding-top: 68px;
+  }
+
+  body {
+    width: 100%;
+    overflow-x: clip;
+  }
+
+  .nav {
+    min-height: 64px;
+    height: 64px;
+    padding: 8px 18px;
+  }
+
+  .brand img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .menu {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    font-size: 27px;
+    line-height: 1;
+  }
+
+  .nav nav {
+    top: 72px;
+    left: 14px;
+    right: 14px;
+    padding: 10px;
+    border-radius: 16px;
+    gap: 2px;
+  }
+
+  .nav nav a {
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    padding: 11px 13px;
+    font-size: 12px;
+  }
+
+  .nav-cta {
+    justify-content: center;
+    margin-top: 4px;
+  }
+
+  .section,
+  .contact {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 94px;
+    padding-bottom: 56px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-mark {
+    order: -1;
+    min-height: 250px;
+    margin-bottom: 18px;
+  }
+
+  .logo-frame {
+    width: min(72vw, 300px);
+  }
+
+  .logo-caption {
+    right: -3%;
+    bottom: 2%;
+    font-size: 8px;
+    padding: 8px 10px;
+  }
+
+  .hero-kicker {
+    gap: 9px;
+    font-size: 9px;
+    letter-spacing: .14em;
+  }
+
+  .stamp {
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px;
+  }
+
+  .hero h1 {
+    font-size: clamp(52px, 15vw, 76px);
+    line-height: .86;
+    letter-spacing: -.065em;
+    margin: 18px 0 24px;
+  }
+
+  .lede {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 1.62;
+  }
+
+  .hero-stats {
+    width: 100%;
+    max-width: none;
+    margin-top: 28px;
+  }
+
+  .hero-stats div {
+    padding: 14px 12px 14px 0;
+    margin-right: 12px;
+  }
+
+  .hero-stats strong {
+    font-size: 24px;
+  }
+
+  .hero-stats span {
+    font-size: 8px;
+  }
+
+  .hero-actions {
+    width: 100%;
+    margin-top: 26px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .button {
+    min-height: 52px;
+    justify-content: center;
+    padding: 15px 18px;
+    font-size: 13px;
+  }
+
+  .ticker {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ticker div {
+    min-width: 0;
+    padding: 19px 10px;
+    font-size: 10px;
+  }
+
+  .split,
+  .section-head,
+  .audience-note {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .section-label,
+  .kicker {
+    font-size: 9px;
+  }
+
+  .content h2,
+  .section-head h2 {
+    font-size: clamp(40px, 11.5vw, 64px);
+    line-height: .94;
+    letter-spacing: -.06em;
+    margin: 12px 0 22px;
+  }
+
+  .content > p:last-child,
+  .section-head > p {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .section-head {
+    margin-bottom: 34px;
+  }
+
+  .audience .section-head h2 {
+    max-width: 360px;
+  }
+
+  .metrics {
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
+
+  .metric {
+    min-width: 0;
+    padding: 28px 22px;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--darkline);
+  }
+
+  .metric:last-child {
+    border-bottom: 0;
+  }
+
+  .metric strong {
+    font-size: clamp(40px, 12vw, 58px);
+  }
+
+  .metric span {
+    font-size: 10px;
+  }
+
+  .audience-note {
+    padding-top: 32px;
+  }
+
+  .audience-note p {
+    font-size: clamp(24px, 7vw, 34px);
+    line-height: 1.16;
+  }
+
+  .service-list {
+    margin-top: 4px;
+  }
+
+  .service {
+    grid-template-columns: 34px minmax(0, 1fr) 24px;
+    gap: 10px;
+    padding: 25px 0;
+  }
+
+  .service > span {
+    font-size: 10px;
+  }
+
+  .service h3 {
+    font-size: clamp(22px, 7vw, 30px);
+    line-height: 1.05;
+    margin-bottom: 8px;
+  }
+
+  .service p {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .service > b {
+    font-size: 19px;
+    align-self: center;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .step {
+    padding: 25px 18px;
+  }
+
+  .step h3 {
+    font-size: 24px;
+    margin: 34px 0 9px;
+  }
+
+  .step p {
+    font-size: 14px;
+  }
+
+  .reels-grid {
+    gap: 18px;
+  }
+
+  .instagram-media {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  .reel-open {
+    margin-top: 10px;
+    font-size: 9px;
+  }
+
+  .why-grid {
+    margin-left: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .why-card {
+    padding: 28px 22px;
+  }
+
+  .why-card h3 {
+    font-size: 26px;
+    margin: 38px 0 10px;
+  }
+
+  .why-card p {
+    font-size: 14px;
+  }
+
+  .contact {
+    padding-top: 76px;
+    padding-bottom: 72px;
+  }
+
+  .contact h2 {
+    font-size: clamp(52px, 15vw, 74px);
+    line-height: .88;
+    margin: 18px 0 24px;
+  }
+
+  .contact p:not(.eyebrow) {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .contact-details {
+    gap: 10px 22px;
+    margin-top: 36px;
+    font-size: 11px;
+  }
+
+  footer {
+    padding: 26px 20px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 10px;
+  }
+
+  footer span {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 380px) {
+  .section,
+  .contact {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .nav {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .hero h1,
+  .contact h2 {
+    font-size: 50px;
+  }
+
+  .content h2,
+  .section-head h2 {
+    font-size: 38px;
+  }
+
+  .service {
+    grid-template-columns: 28px minmax(0, 1fr) 20px;
+    gap: 8px;
+  }
+
+  .service h3 {
+    font-size: 21px;
+  }
+}
