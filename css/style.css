@@ -978,3 +978,243 @@ a, button {
     font-size: 21px;
   }
 }
+
+/* =========================================================
+   iPHONE / SMALL-SCREEN LAYOUT — SPACING + BLOCK COMPOSITION
+   ========================================================= */
+
+@media (max-width: 650px) {
+  :root { --mobile-gutter: 22px; }
+
+  /* Prevent the desktop composition from touching the viewport edges. */
+  .section,
+  .contact,
+  .hero {
+    padding-left: var(--mobile-gutter) !important;
+    padding-right: var(--mobile-gutter) !important;
+  }
+
+  .hero-copy,
+  .content,
+  .section-head,
+  .audience-note,
+  .metrics,
+  .service-list,
+  .process-grid,
+  .why-grid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  /* Typography should breathe instead of feeling squeezed against the edges. */
+  .hero h1 {
+    font-size: clamp(50px, 14.5vw, 70px);
+    line-height: .9;
+    letter-spacing: -.065em;
+    max-width: 100%;
+    margin: 20px 0 26px;
+  }
+
+  .hero h1 br { display: none; }
+  .hero h1 span { display: block; }
+
+  .lede,
+  .content > p:last-child,
+  .section-head > p {
+    max-width: 100%;
+  }
+
+  .section-head h2,
+  .content h2 {
+    font-size: clamp(42px, 11.2vw, 62px);
+    line-height: .96;
+    max-width: 100%;
+    overflow-wrap: normal;
+  }
+
+  /* Hero stats: compact 2×2 composition instead of a long vertical stack. */
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .hero-stats div,
+  .hero-stats div:last-child {
+    margin: 0;
+    padding: 16px 14px 16px 0;
+    border-right: 1px solid var(--line);
+    border-top: 0;
+  }
+
+  .hero-stats div:nth-child(2) { border-right: 0; padding-left: 14px; }
+  .hero-stats div:nth-child(3) {
+    grid-column: 1 / -1;
+    border-right: 0;
+    border-top: 1px solid var(--line);
+    padding-top: 14px;
+  }
+
+  /* Audience: 2×2 blocks save a lot of vertical space on phones. */
+  .metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border: 1px solid var(--darkline);
+  }
+
+  .metric,
+  .metric:last-child {
+    min-width: 0;
+    min-height: 150px;
+    padding: 24px 18px;
+    border-right: 1px solid var(--darkline) !important;
+    border-bottom: 1px solid var(--darkline);
+  }
+
+  .metric:nth-child(2n) { border-right: 0 !important; }
+  .metric:nth-child(n+3) { border-bottom: 0; }
+
+  .metric strong {
+    font-size: clamp(36px, 10vw, 50px);
+    white-space: nowrap;
+  }
+
+  .metric span { line-height: 1.35; }
+
+  /* Partnerships: cards instead of five tall rows. */
+  .service-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    border: 1px solid var(--line);
+    background: var(--line);
+  }
+
+  .service,
+  .service:hover {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    gap: 18px 8px;
+    min-width: 0;
+    min-height: 205px;
+    padding: 20px 16px;
+    margin: 0;
+    background: var(--navy);
+    border: 0;
+    transform: none;
+  }
+
+  .service > span {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 10px;
+  }
+
+  .service > b {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 17px;
+  }
+
+  .service > div {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    min-width: 0;
+    align-self: end;
+  }
+
+  .service h3 {
+    font-size: clamp(20px, 6vw, 27px);
+    line-height: 1.03;
+    margin: 0 0 8px;
+    overflow-wrap: normal;
+  }
+
+  .service p {
+    font-size: 13px;
+    line-height: 1.48;
+  }
+
+  .service:last-child {
+    grid-column: 1 / -1;
+    min-height: 175px;
+  }
+
+  /* Process: two-column blocks rather than five full-width sections. */
+  .process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    border: 1px solid var(--line);
+    background: var(--line);
+  }
+
+  .step,
+  .step:last-child {
+    min-width: 0;
+    min-height: 175px;
+    padding: 20px 16px;
+    background: #0b0e20;
+    border: 0 !important;
+  }
+
+  .step h3 {
+    font-size: 22px;
+    margin: 42px 0 8px;
+  }
+
+  .step p { font-size: 13px; line-height: 1.5; }
+
+  .step:last-child { grid-column: 1 / -1; min-height: 150px; }
+
+  /* Why us: compact two-column cards. */
+  .why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    margin-left: 0;
+    background: var(--line);
+  }
+
+  .why-card,
+  .why-card:last-child {
+    min-width: 0;
+    padding: 22px 16px;
+    background: #0b0e20;
+  }
+
+  .why-card:last-child { grid-column: 1 / -1; }
+  .why-card h3 { font-size: 23px; margin: 34px 0 10px; }
+  .why-card p { font-size: 13px; line-height: 1.5; }
+
+  /* Keep the CTA visually strong without making it unnecessarily tall. */
+  .contact h2 {
+    font-size: clamp(50px, 14vw, 68px);
+    max-width: 100%;
+  }
+
+  .contact-details {
+    gap: 12px 20px;
+  }
+}
+
+@media (max-width: 390px) {
+  :root { --mobile-gutter: 18px; }
+
+  .hero h1 { font-size: 48px; }
+  .section-head h2,
+  .content h2 { font-size: 37px; }
+
+  .metric { min-height: 135px; padding: 20px 14px; }
+  .metric strong { font-size: 34px; }
+  .metric span { font-size: 9px; }
+
+  .service { min-height: 190px; padding: 18px 13px; }
+  .service h3 { font-size: 19px; }
+  .service p { font-size: 12px; }
+
+  .step { min-height: 160px; padding: 18px 13px; }
+  .step h3 { font-size: 20px; }
+  .step p { font-size: 12px; }
+}
