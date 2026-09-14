@@ -9,6 +9,8 @@ window.addEventListener('scroll', () => {
 menu?.addEventListener('click', () => {
   const open = navLinks.classList.toggle('open');
   menu.setAttribute('aria-expanded', open ? 'true' : 'false');
+  menu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  menu.classList.toggle('is-open', open);
 });
 
 document.querySelectorAll('nav a').forEach(a => {
