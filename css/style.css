@@ -221,12 +221,11 @@ footer img{width:30px;height:30px}
   .step:last-child{grid-column:1/-1}
   .step h3{font-size:23px;margin:auto 0 8px}
   .step p{font-size:12px}
-  /* Keep the three reels compact on phones: two side-by-side, third centered below. */
-  .reels-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:start}
-  .reel-wrap{padding:7px;border-radius:17px}
-  .reel-wrap:last-child{grid-column:1/-1;justify-self:center;width:calc(50% - 5px);max-width:none}
-  .instagram-media{border-radius:11px!important}
-  .reel-open{font-size:8px;margin-top:6px;padding:7px 4px 1px}
+  /* Keep selected Reels compact on phones: two-up, then one centered */
+  .reels-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .reel-wrap{padding:6px;border-radius:16px}
+  .reel-wrap:last-child{grid-column:1/-1;max-width:calc(50% - 4.5px);justify-self:center}
+  .reel-open{margin-top:5px;padding:7px 4px 1px;font-size:8px}
   .reel-open:after{font-size:13px}
   .why-grid{grid-template-columns:1fr;gap:10px}
   .why-card{min-height:235px;border-radius:21px;padding:22px}
